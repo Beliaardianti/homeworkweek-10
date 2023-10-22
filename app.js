@@ -19,6 +19,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 // app.use('/', indexRouter);
 app.use('/users', usersRouter);
 app.use('/movies', moviesRouter);
+app.use('/assets', express.static('assets'));
 
 const multer = require('multer');
 const storage =multer.diskStorage({
